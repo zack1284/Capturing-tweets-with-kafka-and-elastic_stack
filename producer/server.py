@@ -91,7 +91,7 @@ def connect_to_endpoint(url):
              fileObject = open("tweets.txt", "a")
              fileObject.write(output + "\n")
              fileObject.close()
-             producer.send('topic_test', value=output)
+             producer.send('topic-test', value=json_data)
              #print(output)
         print("Writing tweets to tweets.txt... Press ctrl+C to end...")
      except ValueError:
