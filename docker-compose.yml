@@ -36,7 +36,7 @@ services:
         KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     networks: 
         - appnetwork
-        - elk
+        #- elk
 
   kafdrop:
     image: obsidiandynamics/kafdrop:latest
@@ -107,7 +107,7 @@ services:
       discovery.type: single-node
     networks:
       - elk
-      - appnetwork
+      #- appnetwork
 
   logstash:
     build:
